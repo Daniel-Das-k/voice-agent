@@ -53,6 +53,7 @@ def _generate_groq_response(api_key, chat_history):
         model=Config.GROQ_LLM,
         messages=chat_history
     )
+    print("heiiiii : ", response.choices[0].message.content)
     return response.choices[0].message.content
 
 
